@@ -8,3 +8,9 @@ and open the template in the editor.
     Author     : bfobert
 */
 
+#border{
+    border: 2px solid navy;
+}
+body{
+    color:blue;
+}

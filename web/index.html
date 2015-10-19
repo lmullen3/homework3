@@ -6,11 +6,26 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>CSC330 Homework 2</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id="border">
+            <form id="calculator" name="calculator-form" method="post" action="calculate">
+                <section id="first"><label for="investment_amount">Investment Amount:</label>
+                    <input type="number" name="amount" id="first" min="0" required autofocus=""></section>
+                <br>
+                <section id="second"><label for="rate">Yearly Interest Rate</label>
+                    <input type="number" min="0" name="rate" id="last" required></section>
+                <br>
+                <section id="third"><label for="years">Number of Years</label>
+                    <input type="number" min="0" name="rate" id="email" required></section>
+                <br>
+                <input type="submit" value="Calculate" id="subscribe" > 
+                <input type="hidden" name="action" value="doCalc">
+            </form>
+        </div> 
     </body>
 </html>
