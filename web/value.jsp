@@ -7,6 +7,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Displays the calculated value</h1>
+        <label>Investment Amount:</label>
+        <span>${value.investAmnt}</span><br>
+        <label>Yearly Interest Rate:</label>
+        <span>${value.yearlyRate}</span><br>
+        <label>Number of Years:</label>
+        <span>${value.numYears}</span><br>  
+        <label>Future Value:</label>        
+        <span>${value.value}</span><br>
     </body>
 </html>

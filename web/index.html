@@ -14,14 +14,14 @@ and open the template in the editor.
     <body>
         <div id="border">
             <form id="calculator" name="calculator-form" method="post" action="calculate">
-                <section id="first"><label for="investment_amount">Investment Amount:</label>
-                    <input type="number" name="amount" id="first" min="0" required autofocus=""></section>
+                <section id="first"><label>Investment Amount:</label>
+                    <input type="number" name="amount"  min="0" required autofocus=""></section>
                 <br>
-                <section id="second"><label for="rate">Yearly Interest Rate</label>
-                    <input type="number" min="0" name="rate" id="last" required></section>
+                <section id="second"><label>Yearly Interest Rate</label>
+                    <input type="number" min="0" name="rate" required></section>
                 <br>
-                <section id="third"><label for="years">Number of Years</label>
-                    <input type="number" min="0" name="rate" id="email" required></section>
+                <section id="third"><label>Number of Years</label>
+                    <input type="number" min="0" name="years" required></section>
                 <br>
                 <input type="submit" value="Calculate" id="subscribe" > 
                 <input type="hidden" name="action" value="doCalc">
