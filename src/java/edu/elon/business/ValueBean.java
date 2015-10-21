@@ -1,6 +1,8 @@
+//Copyright (c) 2015 Benjamin Fobert, Lawrence Mullen
 package edu.elon.business;
 
 import java.io.Serializable;
+import java.text.NumberFormat;
 
 /**
  *
@@ -12,6 +14,7 @@ public class ValueBean implements Serializable {
         private String YearlyRate;
         private String NumYears;
         private String value;
+        private String format;
         
     
     public ValueBean() {
@@ -53,7 +56,7 @@ public class ValueBean implements Serializable {
     public void setNumYears(String years) {
         this.NumYears = years;
     }
-      
+       
     public double calc(){
         int years = Integer.parseInt(NumYears);
         double rate = ((Double.parseDouble(YearlyRate)/100)+1);
@@ -65,4 +68,10 @@ public class ValueBean implements Serializable {
         }
         return value;
     }
+    public String getformat() {
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        this.format = currency.format(this.calc());
+        return format;
+    }
+    
 }

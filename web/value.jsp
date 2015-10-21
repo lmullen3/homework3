@@ -1,24 +1,20 @@
 <!--Copyright (c) 2015 Benjamin Fobert, Lawrence Mullen -->
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="styles/value.css">
-        <title>JSP Page</title>
-    </head>
+  <%@include file="/includes/header.jsp" %>
     <body>
         <div id="border">
             <h1>Future Value Calculator</h1>
             <div id="results">
+            <jsp:useBean id = "value" scope = "application" class = "edu.elon.business.ValueBean" />    
             <label>Investment Amount:</label>
-            <span>${value.investAmnt}</span><br>
+            <span><jsp:getProperty  name="value" property="investAmnt"/></span><br>
             <label>Yearly Interest Rate:</label>
-            <span>${value.yearlyRate}</span><br>
+            <span><jsp:getProperty  name="value" property="yearlyRate"/></span><br>
             <label>Number of Years:</label>
-            <span>${value.numYears}</span><br>  
+            <span><jsp:getProperty  name="value" property="numYears"/></span><br>  
             <label>Future Value:</label>        
-            <span>${value.value}</span><br>
+            <span><jsp:getProperty  name="value" property="format"/></span><br>
             </div>
         </div>
         <footer id="copywrite">

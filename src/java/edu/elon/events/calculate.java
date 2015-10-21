@@ -1,4 +1,4 @@
-
+//Copyright (c) 2015 Benjamin Fobert, Lawrence Mullen
 package edu.elon.events;
 import java.io.IOException;
 import java.util.Calendar;
