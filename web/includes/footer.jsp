@@ -3,6 +3,6 @@
     GregorianCalendar currentDate = new GregorianCalendar();
     int currentYear = currentDate.get(Calendar.YEAR);
 %>
-<p>&copy; Copyright ${currentYear} Ben Fobert &amp; Lawrence Mullen</p>
+<p>&copy; Copyright <%= currentYear %> Ben Fobert &amp; Lawrence Mullen</p>
 </body>
 </html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!--Copyright (c) 2015 Benjamin Fobert, Lawrence Mullen -->
-    <body>
-     <%@include file="/includes/header.jsp" %>
+ <%@include file="/includes/header.jsp" %> 
+
+<body>
         <div id="border">
             <h1>Future Value Calculator</h1>
             <section id="forms">
@@ -10,7 +11,7 @@
                     <input type="number" name="amount"  min="0" required autofocus=""></section>
                 <br>
                 <section id="second"><label>Yearly Interest Rate</label>
-                    <input type="number" min="0" name="rate" required></section>
+                    <input type="number" step="any" min="0" name="rate" required></section>
                 <br>
                 <section id="third"><label>Number of Years</label>
                     <input type="number" min="0" name="years" placeholder="Integer Number of Years" required></section>
@@ -19,7 +20,6 @@
             </form>
             </section>
         </div>
-        <footer id="copywrite">
+        <div id="copyright">
             <%@include file="/includes/footer.jsp" %>
-        </footer>
-    </body>
+        </div>

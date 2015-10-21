@@ -17,8 +17,7 @@
             <span><jsp:getProperty  name="value" property="format"/></span><br>
             </div>
         </div>
-        <footer id="copywrite">
+    <div id="copyright">
             <%@include file="/includes/footer.jsp" %>
-        </footer>
-    </body>
-</html>
+        </div>
+    

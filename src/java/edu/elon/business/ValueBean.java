@@ -35,6 +35,7 @@ public class ValueBean implements Serializable {
        value = String.valueOf(calcValue);
     }
    public String getInvestAmnt() {
+       
         return InvestAmnt;
     }
 
