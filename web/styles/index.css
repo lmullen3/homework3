@@ -1,12 +1,5 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Oct 19, 2015, 6:25:07 PM
-    Author     : bfobert
-*/
+/*Copyright (c) 2015 Benjamin Fobert, Lawrence Mullen*/
+
 body{
     max-width: 32em;
     margin-left: auto;
@@ -64,4 +57,46 @@ footer{
 }
 p{
     margin:0;
+}
+@media only screen and (max-width: 400px){
+
+    body{
+    margin-left: 5px;
+    margin-right: 5px;
+    }
+input[type=number] {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -128px;
+}
+#first label{
+    padding-bottom:10px;
+}
+#second label{
+    padding-top: 9px;
+    position: absolute;
+}
+#second input{
+    margin-top: 30px;
+    position: absolute;
+    margin-left: 42px;
+}
+#third label{
+    padding-top: 35px;
+    margin-left: 43px;
+    position: absolute; 
+}
+#third input{
+    margin-top: 57px;
+    position: absolute;
+    margin-left: 42px;
+}
+#calculator{
+    min-height: 12em;
+}
+#calculate{
+    margin-left: 42px;
+    margin-top: 89px;
+    position: absolute;
+}
 }

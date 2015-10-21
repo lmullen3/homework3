@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!--Copyright (c) 2015 Benjamin Fobert, Lawrence Mullen -->
 <html>
     <head>
         <title>CSC330 Homework 2</title>
@@ -19,7 +19,7 @@
                     <input type="number" min="0" name="rate" required></section>
                 <br>
                 <section id="third"><label>Number of Years</label>
-                    <input type="number" min="0" name="years" required></section>
+                    <input type="number" min="0" name="years" placeholder="Integer Number of Years" required></section>
                 <input type="submit" value="Calculate" id="calculate" > 
                 <input type="hidden" name="action" value="doCalc">
             </form>
