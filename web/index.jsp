@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>CSC330 Homework 2</title>
@@ -13,8 +9,10 @@ and open the template in the editor.
     </head>
     <body>
         <div id="border">
+            <h1>Future Value Calculator</h1>
+            <section id="forms">
             <form id="calculator" name="calculator-form" method="post" action="calculate">
-                <section id="first"><label>Investment Amount:</label>
+                <section id="first"><label>Investment Amount</label>
                     <input type="number" name="amount"  min="0" required autofocus=""></section>
                 <br>
                 <section id="second"><label>Yearly Interest Rate</label>
@@ -22,10 +20,12 @@ and open the template in the editor.
                 <br>
                 <section id="third"><label>Number of Years</label>
                     <input type="number" min="0" name="years" required></section>
-                <br>
-                <input type="submit" value="Calculate" id="subscribe" > 
+                <input type="submit" value="Calculate" id="calculate" > 
                 <input type="hidden" name="action" value="doCalc">
             </form>
-        </div> 
+            </section>
+        </div>
+        <footer id="copywrite">
+            <%@include file="/includes/footer.jsp" %>
+        </footer>
     </body>
-</html>
