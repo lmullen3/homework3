@@ -1,4 +1,4 @@
-/*Copyright (c) 2015 Benjamin Fobert, Lawrence Mullen*/
+/*Copyright (c) 2015 Maddie Chilli, Lawrence Mullen*/
 
 body{
     margin-left: auto;
@@ -12,6 +12,7 @@ body{
 #border{
     border: 2px solid navy;
 }
+
 h1{
     color:blue;
     font-size: 18px;
@@ -26,7 +27,7 @@ h1{
 input[type=number] {
     width: 10em;
 }
-#copyright{
+footer{
     border-right: 2px solid navy;
     border-left: 2px solid navy;
     border-bottom: 2px solid navy;
@@ -88,18 +89,20 @@ input[type=number] {
 }
 #second input{
     margin-top: 30px;
-    position: absolute;
     margin-left: 42px;
+    position: absolute;
+
 }
 #third label{
+    margin-left: 43px;    
     padding-top: 35px;
-    margin-left: 43px;
     position: absolute; 
 }
 #third input{
     margin-top: 57px;
-    position: absolute;
     margin-left: 42px;
+    position: absolute;
+
 }
 #calculator{
     min-height: 12em;

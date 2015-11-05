@@ -1,6 +1,5 @@
-<!--Copyright (c) 2015 Benjamin Fobert, Lawrence Mullen -->
+<!--Copyright (c) 2015 Maddie Chilli, Lawrence Mullen -->
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 
 <%@include file="/includes/header.jsp" %>     
     <body>
@@ -11,7 +10,5 @@
             <p>To continue, click the Back button.</p>
             </section>
         </div>
-<div id="copyright">
             <%@include file="/includes/footer.jsp" %>
-        </div>    
        

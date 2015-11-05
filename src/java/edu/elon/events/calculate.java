@@ -8,11 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import edu.elon.business.ValueBean;
+import java.util.ArrayList;
+import javax.servlet.http.HttpSession;
+import org.apache.tomcat.jni.OS;
 /**
  *
- * @author lawrencemullen and benfobert
+ * @author lawrencemullen and maddiechilli
  */
 public class calculate extends HttpServlet {
+      private ArrayList<String> valueList = new ArrayList<String>();
 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -41,12 +45,13 @@ public class calculate extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            
+                  HttpSession session = request.getSession();
+
             GregorianCalendar currentDate = new GregorianCalendar();
             int currentYear = currentDate.get(Calendar.YEAR);
             request.setAttribute("currentYear", currentYear);
             
-            String url = "/index.html";
+            String url = "/index.jsp";
         
         // get current action
             String action = request.getParameter("action");
@@ -54,22 +59,32 @@ public class calculate extends HttpServlet {
             action = "join";  // default action
         }
             if (action.equals("join")) {
-            url = "/index.html";    // the "join" page
+            url = "/index.jsp";    // the "join" page
         }
              else if (action.equals("doCalc")) {
             // get parameters from the request
             String investAmount = request.getParameter("amount");
             String yearlyRate = request.getParameter("rate");
             String numberOfYears = request.getParameter("years");
+            session.setAttribute("amount", investAmount);
+            session.setAttribute("rate", yearlyRate);
+            session.setAttribute("years", numberOfYears);
             
+            int years = Integer.parseInt(numberOfYears);
+            int x =0;
             // store data in User object
-        ValueBean value = new ValueBean();
-        value.setInvestAmnt(investAmount);
-        value.setYearlyRate(yearlyRate);
-        value.setNumYears(numberOfYears);
-        value.setValue();
+        while(x<years){ 
+        x++;
+        ValueBean bean = new ValueBean();
+        bean.setInvestAmnt(investAmount);
+        bean.setYearlyRate(yearlyRate);
+        bean.setNumYears(String.valueOf(x));
+        bean.setValue();
+        valueList.add(bean.getNumYears() + "   " + bean.getValue());
+        }
+        session.setAttribute("valueList", valueList);
+                
         
-        request.setAttribute("value", value);
             url = "/value.jsp";
             
              getServletContext()
