@@ -13,7 +13,7 @@
                     <input type="number" step="any" min="0" name="rate" required value="${sessionScope.rate}"></section>
                 <br>
                 <section id="third"><label>Number of Years</label>
-                    <input type="number" min="0" name="years" placeholder="Integer Number of Years" value ="${sessionScope.years}" required></section>
+                    <input type="number" min="0" name="years" placeholder="Integer Number of Years"  required></section>
                 <input type="submit" value="Calculate" id="calculate" > 
                 <input type="hidden" name="action" value="doCalc">
             </form>

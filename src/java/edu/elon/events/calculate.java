@@ -16,6 +16,7 @@ import org.apache.tomcat.jni.OS;
  * @author lawrencemullen and maddiechilli
  */
 public class calculate extends HttpServlet {
+      private ArrayList<String> yearList = new ArrayList<String>();
       private ArrayList<String> valueList = new ArrayList<String>();
 
 
@@ -73,6 +74,8 @@ public class calculate extends HttpServlet {
             int years = Integer.parseInt(numberOfYears);
             int x =0;
             // store data in User object
+            valueList.removeAll(valueList);
+            yearList.removeAll(yearList);
         while(x<years){ 
         x++;
         ValueBean bean = new ValueBean();
@@ -80,10 +83,11 @@ public class calculate extends HttpServlet {
         bean.setYearlyRate(yearlyRate);
         bean.setNumYears(String.valueOf(x));
         bean.setValue();
-        valueList.add(bean.getNumYears() + "   " + bean.getValue());
+        yearList.add(bean.getNumYears());
+        valueList.add(bean.getValue());
         }
         session.setAttribute("valueList", valueList);
-                
+        session.setAttribute("yearList", yearList);
         
             url = "/value.jsp";
             
