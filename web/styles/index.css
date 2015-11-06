@@ -49,6 +49,32 @@ footer{
 p{
   margin-left: 2em;
 }
+#headers{
+    margin-left: 2.5em;
+}
+p.calc{
+    margin-bottom: .3em;
+    margin-left: 2.5em;
+    margin-top: .3em;
+}
+div#year{
+     margin-left: 2em;
+     width: 10px;
+}
+div#value{
+     position: relative;
+     margin-left: .5em;
+     left: 11.7em;
+     top: -3.5em;
+}
+div p{
+    clear: right;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+#return{
+     margin-left: 1.7em;
+}
 }
 
 /* 
@@ -99,6 +125,31 @@ footer{
 }
 p{
     margin-left: 2em;
+}
+#headers{
+    margin-left: 2.5em;
+}
+p.calc{
+    margin-bottom: .3em;
+    margin-left: 2.5em;
+    margin-top: .3em;
+}
+div#year{
+     margin-left: 2em;
+     width: 150px;
+}
+div#value{
+     position: relative;
+     margin-left: .5em;
+     left: 11.7em;
+     top: -3.5em;
+}
+div p{
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+#return{
+     margin-left: 1.7em;
 }
 }
 

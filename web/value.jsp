@@ -5,17 +5,16 @@
   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
   <body>
-          <div id="border">
 
        <h1>Future Value Calculator</h1>
-       <p>Investment Amount:    ${sessionScope.amount}</p>
-       <p>Yearly Interest Rate:    ${sessionScope.rate}</p>
-       <p>Number of Year:    ${sessionScope.years}</p>
-       <p><b>Year</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <p class="calc">Investment Amount:    ${sessionScope.amount}</p>
+       <p class="calc">Yearly Interest Rate:    ${sessionScope.rate}</p>
+       <p class="calc">Number of Year:    ${sessionScope.years}</p>
+       <p id="headers"><b>Year</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Value</b></p>
        
-       <div>   
+       <div id="year">   
 <c:forEach var="yearList" items="${sessionScope.yearList}">
     <tr>
     <p><td><c:out value='${yearList}'/></td></p>
@@ -23,7 +22,7 @@
 </c:forEach>
        </div>
        
- <div>   
+ <div id="value">   
 <c:forEach var="valueList" items="${sessionScope.valueList}">
     <tr>
     <p><td><c:out value='${valueList}'/></td></p>
@@ -32,7 +31,7 @@
   </div>
     
        
-            <a href="index.jsp">Return to Calculator</a>
-        </div>
+            <a id="return" href="index.jsp">Return to Calculator</a>
+  </body>
             <%@include file="/includes/footer.jsp" %>
     
