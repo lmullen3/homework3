@@ -3,6 +3,8 @@
     GregorianCalendar currentDate = new GregorianCalendar();
     int currentYear = currentDate.get(Calendar.YEAR);
 %>
-<p>&copy; Copyright <%= currentYear %> Maddie Chilli &amp; Lawrence Mullen</p>
+<footer>
+<p>&copy; <%= currentYear %>, Maddie Chilli &amp; Lawrence Mullen</p>
+</footer>
 </body>
 </html>
